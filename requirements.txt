@@ -1,4 +1,6 @@
-torch=2.1.1
-torchvision=0.16.1
-torchaudio=2.1.1
-jupyterlab=4.0.9
+torch = 2.1.1
+torchvision = 0.16.1
+torchaudio = 2.1.1
+jupyterlab = 4.0.9
+datasets = 2.15.0
+ipywidgets = 3.0.9
