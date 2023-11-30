@@ -1,20 +1,24 @@
-# summarization
-Example of text summarization
+# Summary U.S. Bills
+Example of text summarization task using LLM
 
-* Model: Sequence-to-sequence model
-    * decode-only model needs examples: one shot or few shot.
-    * Potential baseline model: the first three sentences.
-    * T5 or Flan T5?
-        * it has prefix: `summarize:`, `document:`, versatile, https://huggingface.co/docs/transformers/model_doc/t5
-        * https://huggingface.co/docs/transformers/model_doc/flan-t5
-* Data source
-    * Longform Article summarization: https://huggingface.co/datasets/vgoldberg/longform_article_summarization?row=0 (too long)
-    * CNN daily mail: https://huggingface.co/datasets/cnn_dailymail average token 781, summary: 56 tokens, download last months: 94k
-    * Bill Summary: https://huggingface.co/datasets/dreamproit/bill_summary_us , text: 4,687 chars, summary: 640 chars, download: 3
-    * Medical meadow: https://huggingface.co/datasets/medalpaca/medical_meadow_cord19, from abstract to title, download: 127 (sometimes: non-english)
-    * Chemical summary: https://huggingface.co/datasets/griffin/ChemSum, from abstract to title, download: 122
-    * Selected Bill Summary data
-* Data Analysis: the number of tokens
-* Metrics: ROUGE score
-* instruction fine tuning with QLORA
-* Data Loading: dataset or iterable dataset: https://huggingface.co/docs/datasets/about_mapstyle_vs_iterable
+## Goal
+Develop an LLM model to summarize U.S. Bills
+
+* Foundation model: Flan-T5 base model 
+  * Reference: Scaling Instruction-Finetuned Language Models [https://arxiv.org/pdf/2210.11416.pdf].
+  * Sequence-to-sequence model.
+  * Instruction prefix. 
+
+* Data source    
+    * Bill Summary: https://huggingface.co/datasets/dreamproit/bill_summary_us
+
+* Metric: ROUGE Score
+
+## Note: this work is under development
+* The plan is to fine tune foundation model specific to U.S. Bill summary data using QLORA.
+* Current version uses the pretrained model to summarize the U.S. Bills.
+* Current version incorporates all helper functions in notebooks. Future plan is to develop a python library and 
+to move the helper functions to the python library. 
+
+## License
+MIT License
