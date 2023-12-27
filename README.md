@@ -32,6 +32,8 @@ to move the helper functions to the python library.
     * 03a_modeling_pretrained.ipynb: Generate text summary using pretrained model.
     * 03b_modeling_lora.ipynb: Fine-tune LLM using LORA, and generate text summary using fine-tuned model.
 * src: helper functions: currently all helper functions are in the notebooks. Move them to `src` folder in the future.
+* data: folder for data. Not uploaded to Git due to large size.
+* models: models and generated summary. Not uploaded to Git due to large size.
 
 ## License
 MIT License
